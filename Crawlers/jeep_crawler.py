@@ -5,8 +5,7 @@ def jeep_crawler(f, soup):
     for html_tag in html_tags:
         html_tag_text = html_tag.text
         if "MODELLER" in html_tag_text:
-            nextsibling = html_tag.next_element
-            tags = nextsibling.find_all('a')
+            tags = html_tag.parent.find_all('a')
             for tag in tags:
                 model = tag.text
                 if model != None:
