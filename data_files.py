@@ -8,8 +8,8 @@ from Crawlers.fiat_crawler import fiat_crawler
 from Crawlers.bmw_crawler import bmw_crawler
 from Crawlers.honda_crawler import honda_crawler
 from Crawlers.hyundai_crawler import hyundai_crawler
-from Crawlers.mercedes_benz_crawler import mercedes_benz_crawler
 from Crawlers.jeep_crawler import jeep_crawler
+from Crawlers.arabam_crawler import arabam_crawler
 
 def write_html_data_to_file(URL, soup, folder_name):
     folder = 'Models/'+folder_name
@@ -39,9 +39,9 @@ def write_html_data_to_file(URL, soup, folder_name):
         honda_crawler(f, soup)
     elif folder_name == 'hyundai':
         hyundai_crawler(f, soup)
-    # elif folder_name == 'mercedes-benz':
-    #     mercedes_benz_crawler(f, soup)
     elif folder_name == 'jeep':
         jeep_crawler(f, soup)
+    elif folder_name == 'arabam':
+        arabam_crawler(f, soup)
 
     f.close()

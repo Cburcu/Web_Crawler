@@ -20,5 +20,4 @@ class Html_Connection:
             soup = BeautifulSoup(html, 'html.parser')
         except:
             print('URL can not read!!!')
-        
         return soup
